@@ -27,15 +27,15 @@ public class Array {
         }
     }
 
-    void consolOutputRight(){
-        System.out.println("Заполненный массив чисел (вывод с-п):");
+    void consoleOutputRight(){
+        System.out.println("Заполненный массив чисел (вывод слева-направо):");
         for (int i = 0; i<n;i++){
             System.out.println(x[i]);
         }
     }
 
-    void consolOutputLeft(){
-        System.out.println("Заполненный массив чисел (вывод п-н):");
+    void consoleOutputLeft(){
+        System.out.println("Заполненный массив чисел (вывод справа-налево):");
         for (int i = n-1; i>-1;i--){
             System.out.println(x[i]);
         }

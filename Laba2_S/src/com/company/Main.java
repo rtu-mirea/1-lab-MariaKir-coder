@@ -37,17 +37,18 @@ public class Main {
             if(flag==2)
                 array.randInput(10, 100);
             else array.consolInput();
-            array.consolOutputRight();
+            array.consoleOutputRight();
 
-            System.out.print("Вывести массив п-н (да(1), нет(2)): ");
+            System.out.print("Вывести массив справа-налево (да(1), нет(2)): ");
             flag = in.nextInt();
             if (flag==1)
-                array.consolOutputLeft();
+                array.consoleOutputLeft();
 
             System.out.print("На ск-ко увел-ть эл-ты массива, располож. на чет. местах : ");
             flag=in.nextInt();
             array.increaseValues(flag);
-            array.consolOutputRight();
+            System.out.print("Массив с увеличенными значениями на " +flag+". ");
+            array.consoleOutputRight();
 
             System.out.println("Test");
             int ev = array.numEvElem();
