@@ -1,6 +1,5 @@
 package com.company;
 import java.util.Scanner;
-import  java.util.Arrays;
 
 public class Main {
 
@@ -8,7 +7,8 @@ public class Main {
         int n, num=0;//номер массива, номер пункта меню
         Scanner in = new Scanner(System.in);
 
-        while (num!=4){
+
+        while (num!=2){
             System.out.println("Операции над объектами");
             System.out.println("1. Одномерный массив");
             System.out.println("2. Exit");
@@ -36,7 +36,7 @@ public class Main {
             flag = in.nextInt();
             if(flag==2)
                 array.randInput(10, 100);
-            else array.consolInput();
+            else array.consoleInput();
             array.consoleOutputRight();
 
             System.out.print("Вывести массив справа-налево (да(1), нет(2)): ");
@@ -50,16 +50,16 @@ public class Main {
             System.out.print("Массив с увеличенными значениями на " +flag+". ");
             array.consoleOutputRight();
 
-            System.out.println("Test");
-            int ev = array.numEvElem();
-            int noEv = array.numNoEvElem();
-            long[] array2 = new long[ev];
-            long[] array1 = new long[noEv];
             System.out.println("Четные элементы отсортированные по возрастанию:");
-            array.even(array2, ev);
+            for (long item : array.even()){
+                System.out.println(item);
+            }
 
             System.out.println("Нечетные элементы");
-            array.noEven(array1, noEv);
+            for (long item : array.noEven()){
+                System.out.println(item);
+            }
+
 
                 }catch (Exception e){
                     System.out.println(e.toString());
@@ -67,4 +67,5 @@ public class Main {
             }
 
     }
+
 
